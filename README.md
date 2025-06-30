@@ -4,6 +4,6 @@ Small script I have written to help with repetitive data entry tasks. It reads a
 
 Relies on two external modules to function - `keyboard` and `pyperclip`. More information regarding those modules can be found here:
 - [https://pypi.org/project/keyboard/](https://github.com/boppreh/keyboard)
-- [https://pypi.org/project/pyperclip/](https://github.com/asweigart/pyperclip)
+- [https://github.com/asweigart/pyperclip](https://github.com/asweigart/pyperclip)
 
 Enjoy. :)
