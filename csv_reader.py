@@ -19,27 +19,11 @@ OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWA
 
 import csv, keyboard, pyperclip
 
-"""
-Defining global variables via `global` outside of functions creates globally-readable variables.
-Such variables, however, are not automatically assumed as modify targets when pitted-against local
-variables with the same name, hence the need to still call `global` inside functions.
-`global` statements appear to be interpreted at parsing time by the interpreter, not at
-execution time.
-
-Also pre-defining datatypes for the global variables. Not necessary, but helpful for code review.
-"""
-global results_data, results_data_index, key_binding
 results_data = list()
 results_data_index = 0
-key_binding = None
 
 def copier():
-    """
-    Because we are actively modifying a global-scope variable, we must call `global` again for the
-    given global variable we want to modify.
-    
-    """
-    global results_data_index
+    global results_data, results_data_index
     pyperclip.copy(results_data[results_data_index])
     results_data_index += 1
     if results_data_index == len(results_data):
